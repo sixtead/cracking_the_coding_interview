@@ -49,7 +49,7 @@ public class Solution {
         solve(System.in, System.out);
     }
 
-    public static void solve(InputStream input, PrintStream output) {
+    static void solve(InputStream input, PrintStream output) {
         Scanner sc = new Scanner(input);
         System.setOut(output);
         int n = sc.nextInt();
