@@ -44,7 +44,6 @@ import java.util.Scanner;
 
 public class Solution {
 
-
     public static void solve() {
         solve(System.in, System.out);
     }
