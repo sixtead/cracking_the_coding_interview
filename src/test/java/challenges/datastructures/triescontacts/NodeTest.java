@@ -46,8 +46,13 @@ class NodeTest {
         assertTrue(a.children.containsKey('c'));
         assertFalse(a.children.containsKey('k'));
         Node c = a.children.get('c');
+        assertFalse(c.wordEnd);
         assertTrue(c.children.size() == 1);
         assertTrue(c.children.containsKey('k'));
+        Node k = c.children.get('k');
+        assertTrue(k.wordEnd);
+        assertTrue(k.children.size() == 1);
+        assertTrue(k.children.containsKey('e'));
     }
 
     @Test

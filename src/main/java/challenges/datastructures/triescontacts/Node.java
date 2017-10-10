@@ -1,8 +1,6 @@
 package challenges.datastructures.triescontacts;
 
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
 
 class Node {
     HashMap<Character, Node> children;
@@ -17,45 +15,33 @@ class Node {
         this.wordEnd = wordEnd;
     }
 
-    void addChar(Character c, boolean wordEnd) {
+    void addChar(char c, boolean wordEnd) {
         if(!children.containsKey(c)) {
             children.put(c, new Node(wordEnd));
         }
     }
 
     void addWord(String w) {
-        Queue<Character> q = new LinkedList<>();
-        for(Character c: w.toCharArray()) q.add(c);
-        addWord(q);
-    }
+        Node curr = this;
 
-    private void addWord(Queue<Character> w) {
-        if(w.size() > 1) {
-            Character c = w.poll();
-            addChar(c, false);
-            children.get(c).addWord(w);
-        } else {
-            addChar(w.poll(), true);
+        for(int i = 0; i < w.length() - 1; i++) {
+            curr.addChar(w.charAt(i), false);
+            curr = curr.children.get(w.charAt(i));
         }
+        curr.addChar(w.charAt(w.length() - 1), true);
     }
 
     int countWords(String s) {
-        Queue<Character> q = new LinkedList<>();
-        for(Character c: s.toCharArray()) q.add(c);
+        Node curr = this;
 
-        return countWords(q);
-    }
-
-    private int countWords(Queue<Character> s) {
-        if(s.size() > 0) {
-            Character c = s.poll();
-            if(!children.containsKey(c)) {
+        for(char c: s.toCharArray()) {
+            if(!curr.children.containsKey(c)) {
                 return 0;
             } else {
-                return children.get(c).countWords(s);
+                curr = curr.children.get(c);
             }
         }
-        return countWords();
+        return curr.countWords();
     }
 
     private int countWords() {
