@@ -53,7 +53,6 @@ package challenges.datastructures.triescontacts;
 
 import java.io.InputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution {
@@ -63,7 +62,7 @@ public class Solution {
     }
 
     static void solve(InputStream input, PrintStream output) {
-        ArrayList<String> array = new ArrayList<>();
+        Node trie = new Node();
         String[] inputPattern;
         Scanner sc = new Scanner(input);
         System.setOut(output);
@@ -72,16 +71,8 @@ public class Solution {
 
         for(int i = 0; i < n; i++) {
             inputPattern = sc.nextLine().split(" ");
-            if(inputPattern[0].equals("add")) array.add(inputPattern[1]);
-            if(inputPattern[0].equals("find")) findPartial(array, inputPattern[1]);
+            if(inputPattern[0].equals("add")) trie.addWord(inputPattern[1]);
+            if(inputPattern[0].equals("find")) System.out.println(trie.countWords(inputPattern[1]));
         }
-    }
-
-    private static void findPartial(ArrayList<String> array, String partial) {
-        int count = 0;
-        for(String str: array) {
-            if(str.startsWith(partial)) count++;
-        }
-        System.out.println(count);
     }
 }
