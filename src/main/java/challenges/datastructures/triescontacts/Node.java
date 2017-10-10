@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 class Node {
     HashMap<Character, Node> children;
+    private int size = 0;
     boolean wordEnd = false;
 
     Node() {
@@ -19,6 +20,7 @@ class Node {
         if(!children.containsKey(c)) {
             children.put(c, new Node(wordEnd));
         }
+        children.get(c).size++;
     }
 
     void addWord(String w) {
@@ -41,7 +43,8 @@ class Node {
                 curr = curr.children.get(c);
             }
         }
-        return curr.countWords();
+//        return curr.countWords();
+        return curr.size;
     }
 
     private int countWords() {
