@@ -1,4 +1,4 @@
-package challenges.datastructures.stacksbalancedbrackets;
+package challenges.datastructures.stacks;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

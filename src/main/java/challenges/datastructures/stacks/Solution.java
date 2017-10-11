@@ -1,3 +1,5 @@
+//  ** Stacks: Balanced Brackets
+//
 // A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
 //
 // Two brackets are considered to be a matched pair if the an opening bracket (i.e., (, [, or {) occurs to the left
@@ -54,7 +56,7 @@
 // not balanced. Thus, we print NO on a new line.
 // 3. The string {{[[(())]]}} meets both criteria for being a balanced string, so we print YES on a new line.
 
-package challenges.datastructures.stacksbalancedbrackets;
+package challenges.datastructures.stacks;
 
 import java.io.InputStream;
 import java.io.PrintStream;

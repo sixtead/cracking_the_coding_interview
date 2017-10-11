@@ -1,4 +1,4 @@
-package challenges.datastructures.treesisthisabinarysearchtree;
+package challenges.datastructures.trees;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

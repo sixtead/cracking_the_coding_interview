@@ -1,4 +1,4 @@
-package challenges.datastructures.triescontacts;
+package challenges.datastructures.tries;
 
 import java.util.HashMap;
 

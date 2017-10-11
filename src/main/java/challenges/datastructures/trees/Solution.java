@@ -1,3 +1,5 @@
+//  ** Trees: Is This a Binary Search Tree?
+//
 // For the purposes of this challenge, we define a binary search tree to be a binary tree with the following ordering
 // properties:
 //
@@ -43,7 +45,7 @@
 //
 // The tree in the diagram satisfies the ordering property for a Binary Search Tree, so we print `Yes`.
 
-package challenges.datastructures.treesisthisabinarysearchtree;
+package challenges.datastructures.trees;
 
 class Solution {
 /* Hidden stub code will pass a root argument to the function below. Complete the function to solve the challenge.

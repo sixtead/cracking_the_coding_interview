@@ -1,3 +1,5 @@
+//  ** Tries: Contacts
+//
 //We're going to make our own Contacts application! The application must perform two types of operations:
 //
 // 1. add name, where `name` is a string denoting a contact name. This must store `name` as a new contact in
@@ -49,7 +51,7 @@
 // 4. Find and print the number of contact names beginning with hak. There are currently two contact names in the
 // application but neither of them start with hak, so we print  on a new line.
 
-package challenges.datastructures.triescontacts;
+package challenges.datastructures.tries;
 
 import java.io.InputStream;
 import java.io.PrintStream;

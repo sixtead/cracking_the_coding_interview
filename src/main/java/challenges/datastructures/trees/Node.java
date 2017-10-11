@@ -1,4 +1,4 @@
-package challenges.datastructures.treesisthisabinarysearchtree;
+package challenges.datastructures.trees;
 
 class Node {
     int data;
