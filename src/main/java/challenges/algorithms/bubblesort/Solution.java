@@ -1,4 +1,4 @@
-package challenges.algorithms.bubble;
+package challenges.algorithms.bubblesort;
 
 import java.util.Scanner;
 
