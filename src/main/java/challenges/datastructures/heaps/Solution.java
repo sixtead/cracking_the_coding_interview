@@ -22,6 +22,7 @@ public class Solution {
             median = findMedian(minHeap, maxHeap);
             System.out.println(median);
         }
+        sc.close();
     }
 
     private static void add(int e, float m, Heap minHeap, Heap maxHeap) {

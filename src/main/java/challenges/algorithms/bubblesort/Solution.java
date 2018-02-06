@@ -12,6 +12,7 @@ public class Solution {
         for(int a_i=0; a_i < n; a_i++){
             a[a_i] = sc.nextInt();
         }
+        sc.close();
 
         for (int i = 0; i < n; i++) {
             int swaps = 0;

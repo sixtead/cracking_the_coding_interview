@@ -23,5 +23,7 @@ public class Solution {
             if(inputPattern[0].equals("add")) trie.addWord(inputPattern[1]);
             if(inputPattern[0].equals("find")) System.out.println(trie.countWords(inputPattern[1]));
         }
+
+        sc.close();
     }
 }

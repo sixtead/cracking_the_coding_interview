@@ -31,6 +31,7 @@ public class Solution {
                 }
             }
         }
+        in.close();
     }
 
     static int binarySearch(int first, int last, IceCream[] arr, int search) {
